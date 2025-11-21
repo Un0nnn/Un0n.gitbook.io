@@ -1,6 +1,6 @@
 # Ligolo-ng
 
-![](.gitbook/assets/image)
+![](../../../.gitbook/assets/image)
 
 [Download](https://github.com/nicocha30/ligolo-ng/releases) respective agent and proxy file depending on the OS. Install agent on the target and proxy on attacking machine.
 
@@ -79,7 +79,7 @@ Copy
 
 #### [Direct link to heading](ligolo-ng.md#single-pivot) Single Pivot
 
-![](<.gitbook/assets/image (1)>)
+![](<../../../.gitbook/assets/image (1)>)
 
 Proceed to forth code block in "On Attacking Machine" after this
 
@@ -92,7 +92,7 @@ ip route list # Verify the route
 
 #### [Direct link to heading](ligolo-ng.md#double-pivot) Double Pivot
 
-![](<.gitbook/assets/image (2)>)
+![](<../../../.gitbook/assets/image (2)>)
 
 Proceed to fifth code block in "On Attacking Machine" after this
 
@@ -104,6 +104,6 @@ agent.exe -connect 192.168.1.5:11601 -ignore-cert # Establishing ligolo-ng sessi
 
 > Credits: [hackingarticles.in](https://www.hackingarticles.in/a-detailed-guide-on-ligolo-ng/)
 
-[PreviousPivoting & Forwarding](security/offensive-security/pivoting-and-forwarding.md) [NextWeb Applications](security/offensive-security/web-applications/)
+[PreviousPivoting & Forwarding](./) [NextWeb Applications](../web-applications/)
 
 Last updated 8 days ago

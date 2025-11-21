@@ -23,6 +23,6 @@ Always install the web proxy's (Burp/ZAP) CA Certificates.
 1. For Burp, we can do this by completing the steps above, navigating to http://burp, and downloading the CA Certificate. For ZAP go to Tools > Options > Network > Server Certificates.
 2. Now install them within firefox, Certificates > Authorities > Check the CA trust boxes. Now all firefox traffic will route through the proxy (8080).
 
-[PreviousFuzzing](../../../../../fuzzing.md) [NextBurp Suite](../../../../../burp-suite.md)
+[PreviousFuzzing](../fuzzing.md) [NextBurp Suite](burp-suite.md)
 
 Last updated 7 days ago

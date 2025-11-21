@@ -14,6 +14,6 @@ Copy
 ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt -u http://IP:PORT/directory/FUZZ -e .php,.bak -v -fc 404,403
 ```
 
-[PreviousWeb Enumeration](security/offensive-security/web-applications/web-enumeration/) [NextProxies](security/offensive-security/web-applications/web-enumeration/proxies/)
+[PreviousWeb Enumeration](./) [NextProxies](proxies/)
 
 Last updated 8 days ago

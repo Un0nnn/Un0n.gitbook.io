@@ -14,6 +14,6 @@
 3. **Infrastructure Testing:** Assess the overall resilience of the WiFi infrastructure. This involves analyzing **network architecture**, **device configurations**, **firmware versions**, and identifying **implementation flaws** that attackers could exploit.
 4. **Client Device Testing:** Inspect connected devices—such as **laptops, smartphones, and IoT systems**—for vulnerabilities in their **wireless drivers**, **OS**, or **network stack** that could be leveraged for unauthorized access.
 
-[PreviousCommon Web Applications](../../../common-web-applications.md) [Next802.11 & Auth](802.11-and-auth.md)
+[PreviousCommon Web Applications](../web-applications/common-web-applications.md) [Next802.11 & Auth](802.11-and-auth.md)
 
 Last updated 13 days ago

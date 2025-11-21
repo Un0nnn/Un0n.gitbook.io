@@ -139,6 +139,6 @@ Burp Intruder can fuzz or brute-force almost anything—directories, parameters,
 
 [**Direct link to heading**](burp-suite.md#extensions) **Extensions**
 
-[PreviousProxies](security/offensive-security/web-applications/web-enumeration/proxies/) [NextProxy Tools](proxy-tools.md)
+[PreviousProxies](./) [NextProxy Tools](proxy-tools.md)
 
 Last updated 6 days ago

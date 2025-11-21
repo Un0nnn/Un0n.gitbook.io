@@ -69,6 +69,6 @@ Copy
 
 We can deobfuscate code with tools like [unPacker](https://matthewfl.com/unPacker.html). Another way to deobfuscate [packed code](javascript.md#packing-technique) above is to find the return value at the end of the packed code and use console.log to print it instead of executing it.
 
-[PreviousObfuscation & Code](obfuscation-and-code.md) [NextPivoting & Forwarding](security/offensive-security/pivoting-and-forwarding.md)
+[PreviousObfuscation & Code](./) [NextPivoting & Forwarding](../pivoting-and-forwarding/)
 
 Last updated 10 days ago
