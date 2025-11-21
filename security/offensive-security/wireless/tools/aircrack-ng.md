@@ -31,6 +31,6 @@ Cracks WPA/WPA2-PSK from a captured four-way handshake (capture with airodump-ng
 * Cracking uses a dictionary/wordlist (offline).
 * A full handshake is 4 EAPOL packets, but Aircrack-ng can work with just packets 2+3 or 3+4.
 
-[PreviousTools](security/offensive-security/wireless/tools/) [NextAirdecap-ng](airdecap-ng.md)
+[PreviousTools](./) [NextAirdecap-ng](airdecap-ng.md)
 
 Last updated 12 days ago

@@ -44,6 +44,6 @@ Copy
 sudo ifconfig wlan0 up
 ```
 
-[PreviousInterfaces](../../../interfaces.md) [NextWifi CLI](../../../wifi-cli.md)
+[PreviousInterfaces](interfaces.md) [NextWifi CLI](wifi-cli.md)
 
 Last updated 12 days ago

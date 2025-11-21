@@ -98,6 +98,6 @@ Copy
 sudo nmtui
 ```
 
-[PreviousMAC Filtering (Can't Connect)](security/offensive-security/wireless/mac-filtering-cant-connect.md) [NextTools](security/offensive-security/wireless/tools/)
+[PreviousMAC Filtering (Can't Connect)](mac-filtering-cant-connect.md) [NextTools](tools/)
 
 Last updated 12 days ago

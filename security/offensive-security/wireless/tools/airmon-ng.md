@@ -24,6 +24,6 @@ Copy
 sudo airmon-ng check kill
 ```
 
-[PreviousAirgraph-ng](airgraph-ng.md) [NextAirodump-ng](../../../../airodump-ng.md)
+[PreviousAirgraph-ng](airgraph-ng.md) [NextAirodump-ng](airodump-ng.md)
 
 Last updated 12 days ago

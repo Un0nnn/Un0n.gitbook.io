@@ -36,6 +36,6 @@ sudo aireplay-ng -0 10 -a F5:D2:00:AF:69:67 -c D5:00:B2:AF:23:24 wlan0mon
 
 Deauth causes the client to drop and reconnect — visible as increased **Lost** and **Frames** counts. Airodump-ng will capture the four-way handshake; use `-w` to save it to a `.pcap`, using airodump-ng, which you can run with **aircrack-ng** to crack the PSK.
 
-[PreviousAirdecap-ng](../../../../airdecap-ng.md) [NextAirgraph-ng](airgraph-ng.md)
+[PreviousAirdecap-ng](airdecap-ng.md) [NextAirgraph-ng](airgraph-ng.md)
 
 Last updated 12 days ago

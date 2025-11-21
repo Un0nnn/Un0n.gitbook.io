@@ -8,11 +8,11 @@ Copy
 sudo airmon-ng start wlan0
 ```
 
-[Airodump-ng](airodump-ng.md) will show hidden SSIDs; `<length: x>` indicates the SSID length.
+[Airodump-ng](tools/airodump-ng.md) will show hidden SSIDs; `<length: x>` indicates the SSID length.
 
 To reveal hidden SSIDs:
 
-* If clients are connected, use [**aireplay-ng**](security/offensive-security/wireless/tools/aireplay-ng.md) to deauth them. When they reconnect, **airodump-ng** captures (will show) the SSID.
+* If clients are connected, use [**aireplay-ng**](tools/aireplay-ng.md) to deauth them. When they reconnect, **airodump-ng** captures (will show) the SSID.
 * WPA3 networks resist deauth attacks due to 802.11w (PMF); brute-force attacks may be needed instead.
 
 [**Direct link to heading**](hidden-ssids.md#detecting-hidden-ssid-using-deauth) **Detecting Hidden SSID using Deauth**

@@ -104,6 +104,6 @@ agent.exe -connect 192.168.1.5:11601 -ignore-cert # Establishing ligolo-ng sessi
 
 > Credits: [hackingarticles.in](https://www.hackingarticles.in/a-detailed-guide-on-ligolo-ng/)
 
-[PreviousPivoting & Forwarding](pivoting-and-forwarding.md) [NextWeb Applications](security/offensive-security/web-applications/)
+[PreviousPivoting & Forwarding](security/offensive-security/pivoting-and-forwarding.md) [NextWeb Applications](security/offensive-security/web-applications/)
 
 Last updated 8 days ago

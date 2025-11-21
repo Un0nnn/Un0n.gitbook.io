@@ -116,6 +116,6 @@ sudo iw wlan0 set monitor control
 * Basic monitoring: **monitor mode + packet injection** is often enough.
 * Advanced: Allows **node impersonation** and other mesh/network-level attacks.
 
-[PreviousHidden SSIDs](hidden-ssids.md) [NextMAC Filtering (Can't Connect)](security/offensive-security/wireless/mac-filtering-cant-connect.md)
+[PreviousHidden SSIDs](hidden-ssids.md) [NextMAC Filtering (Can't Connect)](mac-filtering-cant-connect.md)
 
 Last updated 12 days ago

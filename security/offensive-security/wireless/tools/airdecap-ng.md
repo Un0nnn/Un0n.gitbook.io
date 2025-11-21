@@ -26,6 +26,6 @@ sudo airdecap-ng -p 'password' OUTPUT-01.cap -e "APName"
 
 These commands for specific protocols will decrypt and allow for easy data analysis from outputted `-dec.cap` files.
 
-[PreviousAircrack-ng](aircrack-ng.md) [NextAireplay-ng](security/offensive-security/wireless/tools/aireplay-ng.md)
+[PreviousAircrack-ng](aircrack-ng.md) [NextAireplay-ng](aireplay-ng.md)
 
 Last updated 12 days ago

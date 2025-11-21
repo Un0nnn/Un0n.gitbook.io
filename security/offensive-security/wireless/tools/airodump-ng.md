@@ -16,6 +16,6 @@ Copy
 sudo airodump-ng -c 11 wlan0mon --band abg -w WriteToFile...
 ```
 
-[PreviousAirmon-ng](security/offensive-security/wireless/tools/airmon-ng.md)
+[PreviousAirmon-ng](airmon-ng.md)
 
 Last updated 13 days ago
