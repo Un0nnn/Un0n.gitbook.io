@@ -1,3 +1,7 @@
+---
+icon: user-hoodie
+---
+
 # Offensive Security
 
 [Active Directory](active-directory.md) [Common Services & Protocols](common-services-and-protocols.md) [Obfuscation & Code](obfuscation-and-code/) [Pivoting & Forwarding](pivoting-and-forwarding/) [Web Applications](web-applications/) [Wireless](wireless/)

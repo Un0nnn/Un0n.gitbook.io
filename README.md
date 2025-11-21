@@ -1,3 +1,7 @@
+---
+icon: lock
+---
+
 # Security
 
 [Defensive Security](security/defensive-security.md) [Offensive Security](security/offensive-security/)
