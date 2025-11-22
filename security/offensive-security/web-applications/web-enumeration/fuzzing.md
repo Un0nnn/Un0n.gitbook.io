@@ -1,19 +1,11 @@
 # Fuzzing
 
-Copy
-
-```
+```shellscript
 ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u http://IP:PORT/FUZZ
 ```
 
-Fuzz for files within a directory
-
-Copy
-
-```
+{% code title="Fuzz for files within a directory" %}
+```shellscript
 ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt -u http://IP:PORT/directory/FUZZ -e .php,.bak -v -fc 404,403
 ```
-
-[PreviousWeb Enumeration](./) [NextProxies](proxies/)
-
-Last updated 8 days ago
+{% endcode %}
