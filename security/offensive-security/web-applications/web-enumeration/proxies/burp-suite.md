@@ -1,95 +1,79 @@
 # Burp Suite
 
-Intercept a Request
-
-Copy
-
-```
+{% code title="Intercept a Request" %}
+```shellscript
 Proxy > Intercept On/Off # On by default
 ```
+{% endcode %}
 
 We can manipulate intercepted requests by testing for: SQL injections, Command injections, Upload bypass, Authentication bypass, XSS, XXE, Error handling, Deserialization.
 
-Intercept a Response
-
-Copy
-
-```
+{% code title="Intercept a Response" %}
+```shellscript
 Proxy > Proxy Settings > Enable Intercept Response # Now enable request interception again and force refresh the page CTRL+SHIFT+R
 ```
+{% endcode %}
 
 Now when we forward a request the response will also be intercepted in Burp. We can use intercepted responses to change the way a web page is rendered in our browser.
 
-**Example (To make this persistent see** Automatic Response Modification **)**
+#### **Example (To make this persistent see** Automatic Response Modification **)**
 
 Lets say a web page field allows only numeric numbers to be inputted. We can change that by modifying the intercepted response HTML code in Burp by allowing type="number" to type="text". Now our browser will display the web page with the text will inputted in the field.
 
-[**Direct link to heading**](burp-suite.md#request-vs-response) **Request vs Response**
+**Request vs Response**
 
 Being able to modify how a web page renders can make certain web application penetration tests significantly easier, removing the need to submit input through an intercepted request. We can **automate this process** so that response modifications occur automatically, eliminating the need for repeated manual interception and editing.
 
 ***
 
-Automatic Request Modification
-
-Copy
-
-```
+{% code title="Automatic Request Modification" %}
+```shellscript
 Proxy > Proxy settings > HTTP match and replace rules
 ```
+{% endcode %}
 
-Automatic Response Modification
-
-Copy
-
-```
+{% code title="Automatic Response Modification" %}
+```shellscript
 Proxy > Options > Match and Replace
 ```
+{% endcode %}
 
 We can repeatedly send any request we intercepted in Burp.
 
-Repeating Requests (Repeater)
-
-Copy
-
-```
+{% code title="Repeating Requests (Repeater)" %}
+```shellscript
 Proxy > HTTP History # To send a request to repeater CTRL+R
 ```
+{% endcode %}
 
-Encoding/Decoding (Decoder)
-
-Copy
-
-```
+{% code title="Encoding/Decoding (Decoder)" %}
+```shellscript
 Convert Selection > URL > URL-encode key characters # In Burp repeater select and right click on text then do this
 ```
+{% endcode %}
 
 Burp has its own Decoded where we can encode and decode with many encoders (like Base64, Unicode). Moreover, Burp inspector can also be used inside the proxy and repeater tabs.
 
 ***
 
-[**Direct link to heading**](burp-suite.md#intruder) **Intruder**
+#### **Intruder**
 
-Burp's Fuzzer (Intruder)
-
-Copy
-
-```
+{% code title="Burp's Fuzzer (Intruder)" %}
+```shellscript
 Proxy History > Right click request > Send to intruder
 ```
+{% endcode %}
 
-_“_ Positions _”_ is where we mark the spot in the request that Burp Intruder will replace with payloads from our wordlist.
+_“_&#x50;osition&#x73;_”_ is where we mark the spot in the request that Burp Intruder will replace with payloads from our wordlist.
 
-Leave extra two lines at bottom of the request before fuzzing
-
-Copy
-
-```
+{% code title="Leave extra two lines at bottom of the request before fuzzing" %}
+```shellscript
 GET /§DIR§/ HTTP/1.1
 Host: example.com
 User-Agent: Mozilla/5.0
 Accept: */*
 ```
+{% endcode %}
 
 In the Payloads tab, we choose the wordlist Burp Intruder will iterate through. Each line of the list is inserted into the Payload Position we marked earlier. Four settings matter: **Payload Position & Type, Payload Configuration, Payload Processing, Payload Encoding.**
 
@@ -109,11 +93,9 @@ Burp has many other types, but for directory fuzzing we use **Simple List**.
 
 To filter out entries that start with a dot (`.`), we add a rule:
 
-**Add → Skip if matches regex**
+Add → Skip if matches regex
 
-Copy
-
-```
+```shellscript
 ^..*$
 ```
 
@@ -121,9 +103,7 @@ Copy
 
 A key feature for directory fuzzing is **Grep – Match**, which highlights responses based on patterns. Since we want to spot directories that return **200 OK**, we:
 
-Copy
-
-```
+```shellscript
 Enable Grep – Match > Click Clear > Add the string 200 OK > Disable Exclude HTTP headers (because the status code is in the header)
 ```
 
@@ -135,10 +115,6 @@ Burp Intruder can fuzz or brute-force almost anything—directories, parameters,
 
 ***
 
-[**Direct link to heading**](burp-suite.md#scanner-paid-only) **Scanner (Paid only)**
+#### **Scanner (Paid only)**
 
-[**Direct link to heading**](burp-suite.md#extensions) **Extensions**
-
-[PreviousProxies](./) [NextProxy Tools](proxy-tools.md)
-
-Last updated 6 days ago
+#### **Extensions**
