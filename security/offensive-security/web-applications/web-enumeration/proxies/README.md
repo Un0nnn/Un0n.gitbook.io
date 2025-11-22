@@ -7,23 +7,23 @@ description: >-
 
 # Proxies
 
-**How Proxies works**
+#### **How Proxies works**
 
 When sending a request to a website while on Burp/ZAP, you’re not connecting directly to the website’s server; you’re connecting to Burp/ZAP's proxy, which forwards your traffic. Every request you make passes through Burp/ZAP, allowing you to **intercept** and review it. When you modify a request, you’re effectively replacing the original with your edited version. Burp/ZAP then sends that modified request to the website, which has no visibility into the original request and only processes the version Burp/ZAP delivers.
 
-**Pre-Configured Browser (In Burp & ZAP)**
+#### **Pre-Configured Browser (In Burp & ZAP)**
 
 In **Burp**'s Proxy → Intercept you can choose **Open Browser** to launch Burp’s built-in browser and automatically route its traffic through the proxy.
 
 In **ZAP**, selecting the Firefox browser button opens a browser already configured to route traffic through ZAP.
 
-#### Proxy Setup
+### Proxy Setup
 
 For many tests you’ll want to use a real browser (Firefox is a common choice). It is easier to configure our browser's proxy with an [extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) rather than the browser's own settings.
 
 By configuring FoxyProxy to 127.0.0.1:8080, requests/responses will be intercepted by Burp/ZAP's default port (8080).
 
-**Installing CA Certificate**
+#### **Installing CA Certificate**
 
 Always install the web proxy's (Burp/ZAP) CA Certificates.
 
