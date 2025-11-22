@@ -1,82 +1,70 @@
+---
+description: >-
+  Wi-Fi interfaces have different modes, each enabling specific capabilities in
+  wireless communications. What each mode does. How to test if your interface
+  supports it:
+---
+
 # Interfaces
 
-\# Check interface strength
-
-Copy
-
-```
+{% code title="Check interface strength" %}
+```shellscript
 iwconfig
 iw reg get
 ```
+{% endcode %}
 
-\# Change interface region (Abide by pertinent rules and laws when changing)
-
-Copy
-
-```
+{% code title="Change interface region (Abide by pertinent rules and laws when changing)" %}
+```shellscript
 sudo iw reg set US
 ```
+{% endcode %}
 
-\# Change interface power settings
-
-Copy
-
-```
+{% code title="Change interface power settings" %}
+```shellscript
 sudo ifconfig wlan0 down
 sudo iwconfig wlan0 txpower 40
 sudo ifconfig wlan0 up
 ```
+{% endcode %}
 
-\# Check interface capabilities
-
-Copy
-
-```
+{% code title="Check interface capabilities" %}
+```shellscript
 iw list
 ```
+{% endcode %}
 
-\# Change interface channel
-
-Copy
-
-```
+{% code title="Change interface channel" %}
+```shellscript
 sudo ifconfig wlan0 down
 sudo iwconfig wlan0 channel 64
 sudo ifconfig wlan0 up
 iwlist wlan0 channel
 ```
+{% endcode %}
 
-\# Change interface frequency
-
-Copy
-
-```
+{% code title="Change interface frequency" %}
+```shellscript
 sudo ifconfig wlan0 down
 sudo iwconfig wlan0 freq "5.52G"
 sudo ifconfig wlan0 up
 ```
+{% endcode %}
 
-\# Check frequency
-
-Copy
-
-```
+{% code title="Check frequency" %}
+```shellscript
 iwlist wlan0 frequency | grep Current
 ```
+{% endcode %}
 
-\# Change mode to managed
-
-Copy
-
-```
+{% code title="Change mode to managed" %}
+```shellscript
 sudo iwconfig wlan0 mode managed
 ```
+{% endcode %}
 
-\# Broadcast a network on master mode
-
-Copy
-
-```
+{% code title="Broadcast a network on master mode" %}
+```shellscript
 interface=wlan0
 driver=65782yn
 ssid=APName
@@ -85,37 +73,29 @@ hw_mode=g
 
 sudo hostapd open.conf
 ```
+{% endcode %}
 
-\# Change interface to mesh mode
-
-Copy
-
-```
+{% code title="Change interface to mesh mode" %}
+```shellscript
 sudo iw dev wlan0 set type mesh
 ```
+{% endcode %}
 
-\# Change interface to monitor mode (First disable interface)
-
-Copy
-
-```
+{% code title="Change interface to monitor mode (First disable interface)" %}
+```shellscript
 sudo iw wlan0 set monitor control
 ```
+{% endcode %}
 
-[**Direct link to heading**](interfaces.md#wi-fi-attack-modes-and-interface-requirements) **Wi-Fi Attack Modes and Interface Requirements**
+#### **Wi-Fi Attack Modes and Interface Requirements**
 
-1. **Rogue AP / Evil-Twin Attack**
-
-* Requires **master/AP mode** support.
-* Tools/daemons: `hostapd`, `hostapd-mana`, `hostapd-wpe`, `airbase-ng`.
-* Purpose: Set up a fake access point to trick clients into connecting.
-
+1. \
+   **Rogue AP / Evil-Twin Attack**
+   * Requires **master/AP mode** support.
+   * Tools/daemons: `hostapd`, `hostapd-mana`, `hostapd-wpe`, `airbase-ng`.
+   * Purpose: Set up a fake access point to trick clients into connecting.
 2. **Backhaul / Mesh Exploitation**
+   * Requires **ad-hoc or mesh mode** support.
+   * Basic monitoring: **monitor mode + packet injection** is often enough.
+   * Advanced: Allows **node impersonation** and other mesh/network-level attacks.
 
-* Requires **ad-hoc or mesh mode** support.
-* Basic monitoring: **monitor mode + packet injection** is often enough.
-* Advanced: Allows **node impersonation** and other mesh/network-level attacks.
-
-[PreviousHidden SSIDs](hidden-ssids.md) [NextMAC Filtering (Can't Connect)](mac-filtering-cant-connect.md)
-
-Last updated 12 days ago
