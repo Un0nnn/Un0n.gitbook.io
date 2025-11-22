@@ -1,21 +1,21 @@
+---
+description: >-
+  Captures raw 802.11 frames — used to collect WEP IVs and WPA/WPA2 handshakes
+  for use with aircrack-ng. Produces several output files (APs, clients,
+  packets) containing detailed network info — useful
+---
+
 # Airodump-ng
 
-\# To use Airodump-ng
-
-Copy
-
+{% code title="To use Airodump-ng" %}
+```shellscript
+sudo airmon-ng start wlan0s
 ```
-sudo airmon-ng start wlan0
-```
+{% endcode %}
 
-\# Scan APs & Clients
-
-Copy
-
-```
+{% code title="Scan APs & Clients" %}
+```shellscript
 sudo airodump-ng -c 11 wlan0mon --band abg -w WriteToFile...
 ```
+{% endcode %}
 
-[PreviousAirmon-ng](airmon-ng.md)
-
-Last updated 13 days ago
