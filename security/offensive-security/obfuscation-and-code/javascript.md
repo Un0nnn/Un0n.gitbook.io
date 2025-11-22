@@ -1,31 +1,33 @@
+---
+description: >-
+  JavaScript runs in user’s browser. The browser receives the .js file and
+  executes it. Because browser JavaScript is visible, developers often use
+  obfuscation (& minification) to make it hard to read.
+---
+
 # JavaScript
 
 `Code minification` (opposite: beautify) means having entire code in a single line (.min.js). It is not exclusive to JS ( [Minification tool](https://www.toptal.com/developers/javascript-minifier)) ( [Beautify tool](https://beautifier.io/)).
 
-#### [Direct link to heading](javascript.md#basic-obfuscation) Basic Obfuscation
+#### Basic Obfuscation
 
-[**Direct link to heading**](javascript.md#packing-technique) **Packing Technique**
+**Packing Technique**
 
 A packer swaps words and symbols from your code into a list (or dictionary) and replaces them with short placeholders. A small `(p,a,c,k,e,d)`-style function then looks up those placeholders and rebuilds the real code when it runs.
 
 This makes the code hard to read, but important strings (like `"password"` or API URLs) could often stay readable so you might need stronger obfuscation.
 
-\# Before packing (No minification)
-
-Copy
-
-```
+{% code title="# Before packing (No minification)" %}
+```javascript
 function greet(name){
     alert("Hello, " + name + "!");
 }
 greet("Alice");
 ```
+{% endcode %}
 
-\# After packing (No minification)
-
-Copy
-
-```
+{% code title="# After packing (No minification)" %}
+```javascript
 eval(function(p,a,c,k,e,d){
     e=function(c){return c.toString(36)};
     if(!''.replace(/^/,String)){
@@ -39,36 +41,29 @@ eval(function(p,a,c,k,e,d){
     return p;
 }('2 0(1){3("4, "+1+"!")}0("5")',6,6,'greet|name|function|alert|Hello|Alice'.split('|'),0,{}))
 ```
+{% endcode %}
 
 We’ve made the code harder to read, but still some of it is visible. We’ll try tools that fully obfuscate the code and remove those cleartext remnants.
 
-#### [Direct link to heading](javascript.md#advanced-obfuscation) Advanced Obfuscation
+#### Advanced Obfuscation
 
 Advanced obfuscation can slow execution, so repeated obfuscation or extreme encoders may cause noticeable delays. Tools like [obfuscator.io](https://obfuscator.io/), JJEncode or AAEncode exist but often make code very slow and should be used only for specific needs (e.g., bypassing filters).
 
-\# Before obfuscation (No minification)
-
-Copy
-
-```
+{% code title="# Before obfuscation (No minification)" %}
+```javascript
 function greet(name){
     console.log("Hello, " + name + "!");
 }
 greet("Alice");
 ```
+{% endcode %}
 
-\# After obfuscation (With minification) // This code with still run as above
-
-Copy
-
-```
+{% code title="# After obfuscation (With minification) // This code with still run as above" %}
+```javascript
 (function(_,$,Z){/* meaningless dead/no-op noise /var x=1337,y=x^42,z=!!(y-1294);(function hide(){var A=[102,117,110,99,116,105,111,110,32,103,114,101,101,116,40,110,41,123,10,32,32,99,111,110,115,111,108,101,46,108,111,103,40,34,72,101,108,108,111,44,32,34,32,43,32,110,32,43,32,34,33,34,41,59,10,125,10,103,114,101,101,116,40,34,65,108,105,99,101,34,41,59];/ confusing renames + pointless math to obscure intent /var B=A.map(function(n,i){return(((n^(i&0x7))-(i%3)+0x00)&0xFF);});/ undo the pointless math to reconstruct real char codes /for(var i=0;i<B.length;i++){B[i]=(((B[i]+(i%3))^(i&0x7))&0xFF);}/ rebuild source and execute with an indirect eval to avoid some simple static scans */var src=String.fromCharCode.apply(null,B);(0,eval)(src);})();})({},[],null);
 ```
+{% endcode %}
 
-#### [Direct link to heading](javascript.md#deobfuscation) Deobfuscation
+#### Deobfuscation
 
 We can deobfuscate code with tools like [unPacker](https://matthewfl.com/unPacker.html). Another way to deobfuscate [packed code](javascript.md#packing-technique) above is to find the return value at the end of the packed code and use console.log to print it instead of executing it.
-
-[PreviousObfuscation & Code](./) [NextPivoting & Forwarding](../pivoting-and-forwarding/)
-
-Last updated 10 days ago
